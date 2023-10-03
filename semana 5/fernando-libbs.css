@@ -1,0 +1,33 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+li a {
+    display: block;
+    background-color: rgba(109, 108, 108, 0.363);
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    width: 420px;
+}
+li:hover a,li:hover img { 
+    color: white;
+    background-color: red;
+    transform: rotate(360deg);
+}
+li {
+    text-align: center;
+    display: flex;
+    width: 420px;
+    height: auto;
+    margin-bottom: 5px;
+}
+img {
+    height: 30.2px;
+    background-color:  red;
+    display: flex;
+    padding: 30px;
+    transition: 1s ease;
+}

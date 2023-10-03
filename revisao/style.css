@@ -1,0 +1,36 @@
+.container {
+  width: 250px;
+  height: 150px;
+}
+
+.blue {
+  background-color: blue;
+  display: inline;
+  float: left;
+}
+
+.tomato {
+  background-color: tomato;
+  display: inline;
+  float: right;
+}
+.violet {
+  background-color: blueviolet;
+  display: inline;
+  float: left;
+}
+.green {
+  background-color: green;
+  display: inline;
+  float: right;
+}
+
+.grey {
+  background-color: grey;
+  height: 450px;
+  padding: 20px;
+}
+.clear {
+  clear: both;
+  height: 150px;
+}

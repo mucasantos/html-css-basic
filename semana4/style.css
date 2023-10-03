@@ -1,0 +1,44 @@
+.title {
+  background-color: aquamarine;
+  border: 3px solid saddlebrown;
+  border-radius: 15px;
+  padding: 5px;
+  display: inline-block;
+}
+
+
+.box-text {
+    width: 300px;
+    padding: 50px;
+    background-color: grey;
+    border: 15px solid green;
+
+}
+
+.imagem {
+    background-color: blueviolet;
+    border: 5px solid black;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+}
+
+.div-pai {
+    width: auto;
+    height: auto;
+    border: 1px solid grey;
+    padding: 5px;
+    width: 450px;
+    
+}
+
+img {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+    border: 5px solid grey;
+    padding: 10px;
+}

@@ -1,0 +1,62 @@
+.pai {
+  width: 450px;
+  height: 300px;
+  background-color: rgb(128, 81, 171);
+}
+
+img {
+  height: 100px;
+  border-radius: 50%;
+}
+
+.para-margin {
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+  padding: 16px;
+}
+.change-margin {
+  margin-left: 100px;
+}
+
+.pos-fixed {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.post-absolute {
+  position: absolute;
+  top: 200px;
+  right: 0;
+}
+
+.pos-relativa {
+  position: relative;
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.top50 {
+  top: 50px;
+  left: 250px;
+}
+
+.cabecalho {
+  height: 300px;
+}
+.corpo {
+  height: 300px;
+}
+.rodape {
+  height: 300px;
+}
+.cor1 {
+  background-color: #07e0ce;
+}
+.cor2 {
+  background-color: #075ae0;
+}
+.cor3 {
+  background-color: #5f22b6;
+}

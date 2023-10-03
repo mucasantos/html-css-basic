@@ -1,0 +1,37 @@
+.paizao {
+    height: auto; 
+}
+
+.div-pai {
+    width: 400px;
+    height: auto;
+    background-color: grey;
+    display: inline-block;
+}
+
+.div-pai2 {
+    width: 400px;
+    height: auto;
+    background-color: grey;
+    float: right;
+    
+}
+
+img {
+    width: 100%;
+}
+h1 {
+    background-color: aquamarine;
+}
+
+.esquerda {
+    background-color: blue;
+    float: right;
+}
+
+.direita {
+    background-color: violet;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

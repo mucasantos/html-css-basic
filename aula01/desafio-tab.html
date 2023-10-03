@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        table,
+        td,
+        th {
+            border: 1px solid #595959;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            
+            width: 150px;
+            height: 150px;
+        }
+
+        th {
+            background: #f0e6cc;
+        }
+
+        .even {
+            background: #fbf8f0;
+        }
+
+        .odd {
+            background: #937445;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2" rowspan="2"><img src="imagens/floresta.jpg" alt=""></td>
+                <td></td>
+                <td></td>
+                <td colspan="2" rowspan="2"><img src="imagens/floresta.jpg" alt=""></td>
+            </tr>
+            <tr>
+                <td class="even"></td>
+                <td class="odd"></td>
+                <td class="even"></td>
+                <td class="odd"></td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2"><img src="imagens/floresta.jpg" alt=""></td>
+                <td></td>
+                <td></td>
+                <td colspan="2" rowspan="2"><img src="imagens/floresta.jpg" alt=""></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="even"></td>
+                <td class="odd"></td>
+                <td class="even"></td>
+                <td class="odd"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
