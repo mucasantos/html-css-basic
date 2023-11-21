@@ -1,0 +1,35 @@
+/*Container => elemento pai (Flexbox)
+propriedades:
+flex-direction
+justify-content => como o conteudo será alinhado
+
+align-content => precisa ter mais de uma linha!
+
+*/
+.container {
+  background-color: wheat;
+  width: 50px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.son1 {
+  background-color: aquamarine;
+  width: 50px;
+  height: 50px;
+}
+.son2 {
+  background-color: rgb(63, 12, 12);
+  width: 50px;
+  height: 50px;
+}
+.son3 {
+  background-color: rgb(213, 13, 156);
+  width: 50px;
+  height: 50px;
+}
