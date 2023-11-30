@@ -9,29 +9,27 @@
 body {
   background-color: #ec9832;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: "Roboto", sans-serif;
 }
 header {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 .menu {
-    width: 50%;
-  
+  width: 50%;
 }
 h1,
 h2 {
   display: inline;
 }
 hr.line {
-    border: 1px dashed black;
+  border: 1px dashed black;
 }
 
 ul {
-    padding-top: 5px;
-    padding-bottom: 010px;
+  padding-top: 5px;
+  padding-bottom: 010px;
 }
 
 li {
@@ -41,8 +39,8 @@ li {
 }
 
 li:hover {
-    color: white;
-    cursor: pointer;
+  color: white;
+  cursor: pointer;
 }
 
 img.principal {
@@ -55,46 +53,45 @@ div.imagem {
 }
 
 .cards {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 div.card img {
-    height: 50%;
-    border-radius: 50%;
-    min-width: 100px;
+  height: 50%;
+  border-radius: 50%;
+  min-width: 100px;
 }
 
 .card {
-    height: 200px;
-    margin: 20px;  
-    border-right:  1px dashed black;
-    padding-right: 50px ;
+  height: 200px;
+  margin: 20px;
+  border-right: 1px dashed black;
+  padding-right: 50px;
 }
 h5 {
-    color: white;
-    padding-bottom: 10px;
+  color: white;
+  padding-bottom: 10px;
 }
 
 .button {
-    width: 70px;
-    height: 25px;
-    font-size: 11px;
-    font-weight: bold;
-    color: #000;
-    background-color:#ec9832;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2),  -2px -2px 2px rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    }
-  
-    /*
-  .button:hover {
-    background-color: #d77906;
-    box-shadow: 0px 15px 20px #8a581b;
-    color: #fff;
-    transform: translateY(-1px);
-  }
-  */
+  width: 70px;
+  height: 25px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000;
+  background-color: #ec9832;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2),
+    -2px -2px 2px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #d77906;
+  box-shadow: 0px 15px 20px #8a581b;
+  color: #fff;
+  transform: translateY(-1px);
+}
