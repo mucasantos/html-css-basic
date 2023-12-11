@@ -1,0 +1,19 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+/*Sinal de maior >: significa filho-direto do elemento. 
+Seleciona todos os filhos-diretos do elemento.
+*/
+.grid-container > div {
+    background-color: rgb(0, 128, 255);
+}
+
+.item1 {
+    grid-column: 1 / span 2;
+}
+
