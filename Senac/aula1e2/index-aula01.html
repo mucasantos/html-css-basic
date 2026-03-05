@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - O que é HTML</title>
+</head>
+
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Blog Educativo: O que é HTML?</h1>
+        <p>Aprendendo a base da <strong>criação de sites</strong> de forma profissional e semântica.</p>
+
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#mapeamento">Estrutura e Tags</a></li>
+                <li><a href="#comparativo">Comparativo</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introdução -->
+        <section id="introducao">
+            <article>
+                <h2>O que é HTML?</h2>
+                <p>
+                    HTML significa <strong>HyperText Markup Language</strong> (Linguagem de Marcação de Hipertexto).
+                    Ao contrário do que muitos pensam, não é uma linguagem de programação, mas sim uma linguagem de
+                    <b>marcação</b> utilizada para <b>estruturar</b> páginas na web.
+                </p>
+
+                <figure>
+                    <img src="img/coding-setup.png" alt="Notebook com código HTML na tela" width="600">
+                    <figcaption>Um ambiente de desenvolvimento típico para um desenvolvedor web.</figcaption>
+                </figure>
+
+                <p>
+                    Com o HTML, organizamos textos, imagens e links. Ele usa <i>tags</i> para marcar cada parte do
+                    conteúdo, permitindo que os navegadores entendam o que deve ser exibido como um título, um parágrafo
+                    ou uma lista.
+                </p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Estrutura Semântica -->
+        <section id="mapeamento">
+            <h2>Estrutura de uma Página Semântica</h2>
+            <p>A semântica é fundamental para a acessibilidade e para que motores de busca (como o Google) entendam seu
+                site.</p>
+
+            <figure>
+                <img src="img/estrutura-html.png"
+                    alt="Diagrama de tags semânticas: header, nav, main, section, article, footer" width="600">
+                <figcaption>Esquema visual das principais tags semânticas do HTML5.</figcaption>
+            </figure>
+
+            <h3>Glossário de Termos</h3>
+            <dl>
+                <dt><strong>Tags</strong></dt>
+                <dd>Os comandos básicos do HTML, como &lt;h1&gt; ou &lt;p&gt;.</dd>
+
+                <dt><strong>Atributos</strong></dt>
+                <dd>Informações extras passadas dentro de uma tag, como o <code>src</code> de uma imagem.</dd>
+
+                <dt><strong>Semântica</strong></dt>
+                <dd>O uso de tags que dão significado ao conteúdo, facilitando a leitura por máquinas.</dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <!-- Comparativo de Tags -->
+        <section id="comparativo">
+            <h2>Comparativo de Tags Comuns</h2>
+            <p>Muitas pessoas confundem tags que parecem iguais visualmente, mas têm significados diferentes:</p>
+
+            <table border="1">
+                <caption>Diferença entre tags Visuais e Semânticas</caption>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Tipo</th>
+                        <th>Significado / Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;b&gt;</code></td>
+                        <td>Visual</td>
+                        <td>Apenas deixa o texto em negrito sem ênfase extra.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;strong&gt;</code></td>
+                        <td>Semântica</td>
+                        <td>Indica que o texto é importante (ênfase forte).</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;i&gt;</code></td>
+                        <td>Visual</td>
+                        <td>Apenas deixa o texto em itálico.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;em&gt;</code></td>
+                        <td>Semântica</td>
+                        <td>Indica ênfase enfatizada (frequentemente lida com entonação diferente).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Passos e Listas -->
+        <section id="passos">
+            <h2>Como começar?</h2>
+            <p>Siga estes passos para criar sua primeira página:</p>
+            <ol>
+                <li>Escolha um editor de código (VS Code, por exemplo).</li>
+                <li>
+                    Crie a estrutura básica:
+                    <ul>
+                        <li>Declare o <code>&lt;!DOCTYPE html&gt;</code></li>
+                        <li>Abra a tag <code>&lt;html&gt;</code></li>
+                        <li>Defina o <code>&lt;head&gt;</code> e o <code>&lt;body&gt;</code></li>
+                    </ul>
+                </li>
+                <li>Adicione conteúdo usando as tags que aprendemos.</li>
+                <li>Salve com a extensão <code>.html</code>.</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- Contato/Feedback -->
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <p>Tem alguma dúvida? Envie uma mensagem para o autor do blog.</p>
+
+            <form action="#" method="post">
+                <p>
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </p>
+                <p>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </p>
+                <p>
+                    <label for="assunto">Assunto:</label><br>
+                    <select id="assunto" name="assunto">
+                        <option value="duvida">Dúvida sobre HTML</option>
+                        <option value="sugestao">Sugestão de conteúdo</option>
+                        <option value="erro">Relatar erro no blog</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="4" cols="50"
+                        placeholder="Escreva sua mensagem aqui..."></textarea>
+                </p>
+                <p>
+                    <button type="submit">Enviar Mensagem</button>
+                    <button type="reset">Limpar Tudo</button>
+                </p>
+            </form>
+        </section>
+
+        <aside>
+            <h3>Saiba mais</h3>
+            <p>
+                Para aprofundar seus estudos, recomendo o site da
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
+                    Documentação da MDN
+                </a>.
+            </p>
+        </aside>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <hr>
+        <p>&copy; 2026 Blog Educativo de HTML. Todos os direitos reservados.</p>
+        <p>Autor: Samuel Santos</p>
+    </footer>
+
+</body>
+
+</html>

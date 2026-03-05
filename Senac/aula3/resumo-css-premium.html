@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo Premium: CSS Básico - Estilizando a Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ec4899;
+            --primary-dark: #be185d;
+            --secondary: #64748b;
+            --bg: #fdf2f8;
+            --card-bg: #ffffff;
+            --text: #0f172a;
+            --text-light: #475569;
+            --border: #f9a8d4;
+            --code-bg: #fce7f3;
+            --accent: #f59e0b;
+        }
+
+        @media print {
+            body {
+                background: white !important;
+                padding: 0 !important;
+            }
+
+            .container {
+                max-width: 100% !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 20px !important;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            h1,
+            h2 {
+                color: black !important;
+            }
+
+            pre {
+                background: #f1f5f9 !important;
+                color: #0f172a !important;
+                border: 1px solid #ddd !important;
+            }
+
+            .exercise-box {
+                border: 2px solid #000 !important;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--code-bg);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 400;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            color: var(--text);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 6px solid var(--primary);
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            color: var(--primary-dark);
+        }
+
+        p {
+            margin-bottom: 18px;
+            color: var(--text-light);
+        }
+
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        code {
+            background: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9em;
+            color: var(--primary-dark);
+        }
+
+        pre {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            font-family: 'Consolas', monospace;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            border: 1px solid #334155;
+            position: relative;
+        }
+
+        pre::before {
+            content: "CSS";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #334155;
+            color: #ec4899;
+            font-size: 10px;
+            padding: 4px 10px;
+            border-bottom-left-radius: 8px;
+            font-weight: 700;
+        }
+
+        .box-model-container {
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            padding: 40px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .box-model-demo {
+            border: 4px solid var(--primary);
+            padding: 30px;
+            background: #fce7f3;
+            margin: 20px;
+            position: relative;
+        }
+
+        .box-inner {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-align: center;
+        }
+
+        .master-tip {
+            background: #fffbeb;
+            border: 1px dashed var(--accent);
+            padding: 25px;
+            border-radius: 16px;
+            margin: 30px 0;
+        }
+
+        .master-tip strong {
+            color: #92400e;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .tag-card {
+            background: #fdfdfd;
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--code-bg);
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        .exercise-box {
+            background: #f8fafc;
+            border: 2px solid var(--primary);
+            padding: 30px;
+            border-radius: 16px;
+            margin-top: 30px;
+        }
+
+        .exercise-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dotted #cbd5e1;
+        }
+
+        .exercise-item:last-child {
+            border-bottom: none;
+        }
+
+        .btn-print {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 15px -3px rgba(236, 72, 153, 0.4);
+            z-index: 1000;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid var(--code-bg);
+            color: var(--secondary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn-print no-print" onclick="window.print()">
+        🖨️ Imprimir / Salvar PDF
+    </button>
+
+    <div class="container">
+        <header>
+            <h1>Guia Completo: CSS Básico</h1>
+            <p class="subtitle">Layout, Box Model e Posicionamento</p>
+        </header>
+
+        <!-- 1. INTRODUCAO -->
+        <section>
+            <h2>📜 1. O que é CSS?</h2>
+            <p>O <strong>CSS (Cascading Style Sheets)</strong> controla como os elementos HTML aparecem na tela. Ele
+                cuida do design, das cores, das fontes e do layout (espaçamentos e posições).</p>
+        </section>
+
+        <!-- 2. SINTAXE -->
+        <section>
+            <h2>🏗 2. Sintaxe e Regras</h2>
+            <pre>
+seletor {
+  propriedade: valor;
+}</pre>
+            <p><strong>Exemplo:</strong> <code>h1 { color: red; font-size: 20px; }</code></p>
+        </section>
+
+        <!-- 3. BOX MODEL EXPANDIDO -->
+        <section>
+            <h2>📦 3. O Box Model: Padding vs Margin</h2>
+            <p>Todo elemento no CSS é uma "caixa". Entender a diferença entre <strong>Padding</strong> e
+                <strong>Margin</strong> é essencial:</p>
+
+            <div class="box-model-container">
+                <div class="box-model-demo">
+                    <div class="box-inner">CONTEÚDO</div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="tag-card">
+                    <h3>📏 Padding (Interno)</h3>
+                    <p>O espaço <strong>dentro</strong> da borda. Ele afasta o conteúdo da sua própria borda.</p>
+                    <code>padding: 20px;</code>
+                </div>
+                <div class="tag-card">
+                    <h3>📏 Margin (Externo)</h3>
+                    <p>O espaço <strong>fora</strong> da borda. Ele empurra outros elementos para longe desta caixa.</p>
+                    <code>margin: 20px;</code>
+                </div>
+            </div>
+
+            <h3>Shorthand (Atalhos)</h3>
+            <p>Você pode definir os 4 lados de uma vez seguindo a ordem: <b>Topo, Direita, Baixo, Esquerda</b> (sentido
+                horário).</p>
+            <pre>
+/* Topo | Direita | Baixo | Esquerda */
+margin: 10px 20px 30px 40px;
+
+/* Topo e Baixo | Direita e Esquerda */
+padding: 10px 20px;</pre>
+        </section>
+
+        <!-- 4. POSITION -->
+        <section>
+            <h2>📍 4. Propriedade Position</h2>
+            <p>Define como um elemento deve ser posicionado na página.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>static</code></td>
+                        <td>Padrão. Segue o fluxo normal da página.</td>
+                    </tr>
+                    <tr>
+                        <td><code>relative</code></td>
+                        <td>Posicionado relativo à sua posição original.</td>
+                    </tr>
+                    <tr>
+                        <td><code>absolute</code></td>
+                        <td>Posicionado relativo ao primeiro elemento pai com <i>position</i>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>fixed</code></td>
+                        <td>Fica "preso" em relação à janela do navegador (não rola).</td>
+                    </tr>
+                    <tr>
+                        <td><code>sticky</code></td>
+                        <td>Fica "preso" conforme você rola a página, mas dentro do seu container.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="master-tip">
+                <strong>💎 Dica de Mestre:</strong>
+                <p>Ao usar <code>absolute</code> ou <code>relative</code>, você passa a ter acesso às propriedades
+                    <code>top</code>, <code>bottom</code>, <code>left</code> e <code>right</code> para mover o elemento.
+                </p>
+            </div>
+        </section>
+
+        <!-- 5. EXERCICIOS -->
+        <section id="exercicios">
+            <h2>🎯 5. Exercícios Práticos</h2>
+            <div class="exercise-box">
+                <div class="exercise-item">
+                    <strong>1. Desafio do Espaçamento:</strong> Crie uma caixa com 200px de largura, borda de 2px sólida
+                    preta, fundo amarelo e um <b>padding de 40px</b>. Como o texto dentro dela se comporta?
+                </div>
+                <div class="exercise-item">
+                    <strong>2. Margens Automáticas:</strong> Se você definir <code>margin-left: auto;</code> e
+                    <code>margin-right: auto;</code> em uma caixa que tem uma largura (width) fixa, o que acontece com
+                    ela na tela?
+                </div>
+                <div class="exercise-item">
+                    <strong>3. O Topo Fixo:</strong> Como você faria para deixar um menu (tag <code>&lt;nav&gt;</code>)
+                    sempre visível no topo da tela, mesmo quando o usuário rolar a página para baixo?
+                </div>
+                <div class="exercise-item">
+                    <strong>4. Classes e IDs:</strong> Crie um parágrafo com uma <b>classe</b> chamada "aviso" que tenha
+                    a cor do texto vermelha. Depois, crie um <b>ID</b> chamado "destaque" que mude o fundo para azul.
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Guia de CSS Básico Refinado - Samuel Santos</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
